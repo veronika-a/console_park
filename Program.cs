@@ -38,8 +38,8 @@ namespace ConsolePark
             parking.ParkPlaces.Add(parkPlace);
 
             ParkingProcess parkingProcess = new ParkingProcess();
-            ParkingResult parkingResult = new ParkingResult();
-            parkingResult = (ParkingResult)parkingProcess.ParkCar(parking, car, 3);
+            IParkingResult parkingResult = new ParkingResult();
+            parkingResult = parkingProcess.ParkCar(parking, car, 3);
             Console.WriteLine("ParkingNumber: " + parkingResult.ParkingNumber);
             Console.WriteLine("Car: " + parkingResult.Car.Name);
             Console.WriteLine("Price: " + parkingResult.Price);
